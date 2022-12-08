@@ -57,7 +57,7 @@ export default function footer() {
                     <h6 className="mt-2">Connect Us</h6>
                         <ul classsName="LIst-group Lis-group-flush">
                             <li classname="list-group-item">
-                                <Button isExternal type="link" href="mailto:support@sraycation.id">
+                                <Button isExternal type="link" href="mailto:support@staycation.id">
                                    Support@staycation.id
                                 </Button>
                             </li>

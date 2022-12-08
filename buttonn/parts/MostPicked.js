@@ -1,5 +1,5 @@
 import React from "react";
-
+import Fade from 'react-reveal/Fade';
 import Button from 'element/Button'
 
 export default function MostPicked(props) {
@@ -15,6 +15,7 @@ export default function MostPicked(props) {
                            key={`mostpicked-${index}`}
                            className={`item column-4${index === 0 ? "row-2" : "row-1"}`}
                          >
+                            <Fade bottom delay={500 * index}>
                            <div className="card card-featured">
                                 <div className="tag">
                                     ${item.price}
@@ -40,6 +41,7 @@ export default function MostPicked(props) {
                                     </span>
                                 </div>
                            </div>
+                           </Fade>
                          </div>
                         );
                     })}

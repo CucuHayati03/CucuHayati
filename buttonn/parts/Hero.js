@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from 'react-reveal/Fade';
 
 import ImageHero from "assets/images/img-hero.jpg";
 import ImageHero_ from "assets/images/img-hero-frame.jpg";
@@ -7,20 +8,22 @@ import IconTraveler from "assets/images/icons/icon-traveler.svg";
 import IconTreasure from "assets/images/icons/icon-treasure.svg";
 
 import Button from 'element/Button'
-export default function Hero(props) {
 
+import FormatNumber from "utils/FormatNumber";
+
+export default function Hero(props) {
     function showMostPicked() {
         window.scrollTo({
             top: props.refMostpicked.current.offsetTop -30,
             behavior: "smooth"
-            
         });
-}
+    }
     
       return(
+        <Fade>
         <section className="container pt-4">
             <div classsName="row align-items-center">
-                <div className="col-auto pr-5" style={{ widht: 422 }}>
+                <div className="col-auto pr-5" style={{ widht: 510 }}>
                     <h1 className="h2 font-weight-bold line-height-1 mb-3">
                         Forget Busy Work, <br />
                         Start Next Vacation
@@ -32,8 +35,9 @@ export default function Hero(props) {
                       We Provide what you need to enjoy your holiday with family. Time to 
                       make another memorable moments.
                     </p>
-                    <Button className="btn px-5"
-                     hasShadow 
+                    <Button 
+                     className="btn px-5"
+                     hasShadow
                      isPrimary 
                      onClick={showMostPicked}
                     >
@@ -88,20 +92,22 @@ export default function Hero(props) {
                 <div className="col-6 pl-5">
                     <div style={{ widht:528, height: 410 }}>
                     <img 
-                    src={ImageHero} 
-                    alt="Room with couches" 
-                    className="img-fluid position-absolute" 
-                    style={{ margin: "-30px 0 0 -30px, zIndex: 1"}}
+                     src={ImageHero} 
+                     alt="Room with couches" 
+                     className="img-fluid position-absolute" 
+                     style={{ margin: "-30px 0 0 -30px, zIndex: 1"}}
                     />
                     <img 
-                    src={ImageHero}
-                    alt="Room with couches"
-                    classname="img-fluid position-absolute"
-                    style={{ margin: "0 -15px -15px 0"  }}
+                     src={ImageHero}
+                     alt="Room with couches"
+                     classname="img-fluid position-absolute"
+                     style={{ margin: "0 -15px -15px 0"  }}
+                      />
                     </div>
                 </div>
             </div>
         </div>    
     </section>
+    </Fade>
       );
 }
